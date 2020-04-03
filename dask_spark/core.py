@@ -99,7 +99,7 @@ def start_worker(address):
 
     loop = IOLoop.current()
     w = Worker(address, loop=loop)
-    w.start(0)
+    w.start()
     print("Started worker")
 
     distributed.global_worker = w
